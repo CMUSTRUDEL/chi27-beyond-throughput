@@ -1,0 +1,37 @@
+:root {
+  --bg: #fbfaf7; --fg: #1d1d1f; --muted: #5b5b63; --accent: #b4441f;
+  --card: #ffffff; --line: #e4e1da; --hero: #f2eee6;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #141416; --fg: #ececee; --muted: #a3a3ad; --accent: #f08a5d;
+          --card: #1d1d21; --line: #303036; --hero: #1b1a1d; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--accent); }
+.hero { background: var(--hero); border-bottom: 1px solid var(--line); padding: 56px 0 24px; }
+.kicker { color: var(--muted); font-size: 0.9rem; letter-spacing: 0.02em; margin: 0; }
+h1 { font-size: clamp(2.4rem, 7vw, 3.6rem); line-height: 1.05; margin: 12px 0 8px; }
+.subtitle { font-size: 1.25rem; margin: 0 0 20px; }
+.status { font-size: 0.95rem; color: var(--muted); border-left: 3px solid var(--accent); padding-left: 12px; max-width: 640px; }
+nav { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 28px; }
+nav a { text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+section { padding: 40px 0 8px; }
+h2 { font-size: 1.6rem; margin: 0 0 12px; }
+h3 { font-size: 1.05rem; margin: 0 0 6px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 18px 0; }
+.cards article, .sessions > div { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; }
+.cards p, .sessions p { margin: 0; font-size: 0.95rem; }
+.sessions { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 18px 0; }
+table { border-collapse: collapse; width: 100%; }
+td { padding: 10px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+td:first-child { font-weight: 600; padding-right: 20px; width: 45%; }
+.note { color: var(--muted); font-style: italic; }
+.people { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px 20px; }
+.people li { display: flex; flex-direction: column; }
+.name { font-weight: 600; }
+.aff { color: var(--muted); font-size: 0.92rem; }
+footer { margin-top: 48px; padding: 24px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
